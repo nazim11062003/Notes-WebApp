@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes WebApp</title>
+    <link rel="stylesheet" href="/Stylesheets/edit.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <img class="logo" src="/Images/logo.png" alt="logo">
+        </div>
+        <div class="form">
+            <form action="/update/<%= notes.id%>" method="post">
+                <input type="text" class="note_title" placeholder="Title of the note" name="title" value="<%= notes.title %>">
+                <!-- <textarea id="notes_content" placeholder="Write your notes here" name="content"></textarea> -->
+                <input id="notes_content" placeholder="Write your notes here" name="content" value="<%= notes.content%>"></input>
+                <input type="submit" class="createBtn" value="Update Note">
+            </form>
+        </div>
+        <a href="/read" class="nav_read">View Notes</a>
+        <img class="pen3d" src="/Images/pen3d.png" alt="">
+        <div class="div_char">
+            <img class="character" src="/Images/character3.png">
+        </div>
+    </div>
+</body>
+</html>

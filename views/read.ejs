@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes WebApp</title>
+        <link rel="stylesheet" href="/Stylesheets/read.css">
+    </head>
+    <body>
+        <a href="/" class="back_home">Go back to home</a>
+        <h1 class="your_note_heading">Your Notes</h1>
+        <div class="note">
+            <% notes.forEach(function(notes){ %>
+            <div class="note1">
+                <h2 class="note_title"><%= notes.title %></h2>
+                <p class="note_text"><%= notes.content %></p>
+                <div class="edit_delete">
+                    <a href="/edit/<%= notes.id%>" class="edit">Edit Note</a>
+                    <a href="/deleted/<%= notes.id%>" class="delete">Delete Note</a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <div class="div_char">
+            <img class="character" src="/Images/character2.png">
+        </div>
+    </body>
+</html>
